@@ -43,14 +43,15 @@ router.post('/api/exercise/add', (req, res, next) => {
         duration : req.body.duration,
         date : req.body.date
     });
-    const saved_data = exercise_data_document.save((e, document) => {
+    exercise_data_document.save((e, document) => {
       if (e) {
         console.log(e)
+      } else {
+          console.log("saved", document);
+          res.send({exercise_data : document})
       }
-      return document
     });
-    console.log("saved", saved_data);
-    res.send({exercise_data : 'test'})
+
 });
 
 
