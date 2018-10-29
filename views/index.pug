@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div#container
+    h1 Exercise Tracker
+    div#add_user_container
+      h3  Add a User
+      form(method='post', action='api/exercise/new-user')
+        input(placeholder='username' name='new_user')
+        button Submit New User
+    div#add_exercises_container
+      h3 Add Exercise
+      form(method='post', action='api/exercise/add')
+        input(placeholder='userId*' name='username')
+        input(placeholder='description*' name='description')
+        input(placeholder='duration* (mins.)' name='duration')
+        input(placeholder='date (yyyy-mm-dd)' name='date')
+        button Submit Lift

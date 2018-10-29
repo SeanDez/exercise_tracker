@@ -1,6 +1,48 @@
 body {
-  padding: 50px;
+  background-color: black;
+  color: yellow;
+  padding: 5vh 2vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+  min-height: 100vh;
+}
+
+h3 {
+    border: 1px dotted cornflowerblue;
+}
+
+input, button, h3 {
+    margin: 1vh 1vw;
+    flex: 1;
+}
+
+button {
+    background-color: orange;
+    padding: 1vh 2vw;
+    color: azure;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#add_user_container, #add_exercises_container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+
+    align-content: space-around;
+    margin: 5vh auto;
+
+    background-color: #010065;
+    border: 1px solid #0d2878;
+    border-radius: 3%;
 }
 
 a {
