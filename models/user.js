@@ -10,7 +10,10 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
     username : {
         type: String,
+        required: true
     }
 });
 
-const User = mongoose.model('ExerciseTracker_User', )
+const User = mongoose.model('ExerciseTracker_User', UserSchema);
+module.exports = User;
+

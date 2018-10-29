@@ -10,7 +10,7 @@ block content
         button Submit New User
     div#add_exercises_container
       h3 Add Exercise
-      form(method='post', action='api/exercise/add')
+      form(method='post', action='api/exercise/add' name='exercise_form_data')
         input(placeholder='userId*' name='username')
         input(placeholder='description*' name='description')
         input(placeholder='duration* (mins.)' name='duration')
